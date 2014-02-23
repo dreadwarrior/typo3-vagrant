@@ -8,12 +8,12 @@ add-apt-repository -y ppa:ondrej/php5
 apt-get -y -qq update && apt-get -y -qq dist-upgrade
 
 # additional xdebug settings
-ln -s /vagrant/vagrant/config/php5-fpm/conf.d/xdebug_typo3.ini /etc/php5/fpm/conf.d/21-xdebug_typo3.ini
+ln -s /vagrant/vagrant/config/php5-fpm/conf.d/21-xdebug.ini /etc/php5/fpm/conf.d/21-xdebug.ini
 
 # removal. of default pool
 mv /etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.conf.bak
 # adding our own pool
-ln -s /vagrant/vagrant/config/php5-fpm/pool.d/www_typo3.conf /etc/php5/fpm/pool.d/www_typo3.conf
+ln -s /vagrant/vagrant/config/php5-fpm/pool.d/vagrant.conf /etc/php5/fpm/pool.d/vagrant.conf
 
 service php5-fpm restart
 service nginx restart
