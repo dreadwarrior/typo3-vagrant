@@ -7,6 +7,8 @@ apt-get -y -qq install python-software-properties
 add-apt-repository -y ppa:ondrej/php5
 apt-get -y -qq update && apt-get -y -qq dist-upgrade
 
+# opcache adjustments, see http://forge.typo3.org/issues/51475
+ln -s /vagrant/vagrant/config/php5-fpm/conf.d/06-opcache.ini /etc/php5/fpm/conf.d/06-opcache.ini
 # additional xdebug settings
 ln -s /vagrant/vagrant/config/php5-fpm/conf.d/21-xdebug.ini /etc/php5/fpm/conf.d/21-xdebug.ini
 
