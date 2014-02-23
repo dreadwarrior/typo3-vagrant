@@ -15,4 +15,5 @@ mv /etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.conf.bak
 # adding our own pool
 ln -s /vagrant/vagrant/config/php5-fpm/pool.d/www_typo3.conf /etc/php5/fpm/pool.d/www_typo3.conf
 
+service php5-fpm restart
 service nginx restart
