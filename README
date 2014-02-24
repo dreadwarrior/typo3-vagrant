@@ -1,0 +1,23 @@
+A Vagrant setup package for TYPO3.CMS
+-------------------------------------
+
+- Simple shell provisioning
+- Latest Ubuntu
+- PHP5 FPM
+- Nginx
+- MySQL
+
+Keeping VirtualBox Guest Additions up to date
+---------------------------------------------
+
+  ~$ vagrant plugin install vagrant-vbguest
+
+Todo
+----
+
+- test MariaDB
+
+License
+-------
+
+GPLv2
